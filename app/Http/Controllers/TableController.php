@@ -21,7 +21,17 @@ class TableController extends Controller
         $tables = Table::all();
         return view('admin.admin_table', compact('tables'));
     }
+    public function store(Request $request)
+    {
+        $latestTable = Table::orderBy('id', 'desc')->first();
+        $newTableId = $latestTable ? $latestTable->id + 1 : 1;
 
+        $table = new Table();
+        $table->id = $newTableId;
+        $table->save();
+
+        return redirect()->route('tables.index')->with('success', 'Table created successfully');
+    }
     public function show($id)
     {
         $table = Table::findOrFail($id);
@@ -93,7 +103,6 @@ public function pay(Request $request, $id)
         return $order->price + $order->addons->sum('price');
     });
 
-    // Create a Stripe session
     $stripe = new \Stripe\StripeClient(config('stripe.stripe_sk'));
     $response = $stripe->checkout->sessions->create([
         'line_items' => [[
@@ -209,24 +218,23 @@ public function addItem(Request $request)
         }
     }
 
-    // Create a new order and set the price to the calculated total for a single item
+
     $order = new Order();
     $order->table_id = $validatedData['table_id'] ?? null;
     $order->dish_id = $validatedData['dish_id'];
     $order->quantity = $validatedData['quantity'];
-    $order->price = $totalPrice; // Store the price for one item including add-ons
+    $order->price = $totalPrice; 
     $order->status = 'in process';
     $order->comment = $validatedData['comment'] ?? null;
     $order->save();
 
-    // Attach the add-ons to the order
+
     if ($request->has('addons')) {
         foreach ($request->addons as $addon_id) {
             $order->addons()->attach($addon_id);
         }
     }
 
-    // Redirect back to the order creation page with a success message
     return redirect()->route('order.create', ['table_id' => $order->table_id])->with('success', 'Item added to order.');
 }
 
@@ -398,8 +406,7 @@ public function splitPay(Request $request, $id)
     $orders = Order::whereIn('id', $validatedData['orders'])->get();
     $totalAmount = $orders->sum('price');
 
-    // Process the payment logic here
-    // For simplicity, let's mark the selected orders as paid
+
     foreach ($orders as $order) {
         $order->status = 'paid';
         $order->save();
