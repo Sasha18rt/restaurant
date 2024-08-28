@@ -94,6 +94,22 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
+				<a href="/tables" class="sidebar-nav-link @yield('table')">
+					<div>
+                    <i class="fa-solid fa-table-cells-large"></i>
+					</div>
+					<span>Tables</span>
+				</a>
+			</li>
+			<li class="sidebar-nav-item">
+    <a href="/orders" class="sidebar-nav-link @yield('orders')">
+        <div>
+            <i class="fa-solid fa-clipboard-list"></i>
+        </div>
+        <span>Orders</span>
+    </a>
+</li>
+			<li  class="sidebar-nav-item">
 				<a href="/reviews" class="sidebar-nav-link @yield('reviews')">
 					<div>
 						<i class="fa-solid fa-comments"></i>

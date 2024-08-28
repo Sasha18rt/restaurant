@@ -1,0 +1,175 @@
+body {
+    background-color: #ffffff;
+    color: #000;
+    font-family: Arial, sans-serif;
+}
+.container {
+    margin-top: 20px;
+    padding-bottom: 150px;
+}
+.header {
+    background-color: #164705;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.header .back-icon, .header .user-icon {
+    position: absolute;
+    top: 15px;
+    font-size: 1.5em;
+    color: white;
+}
+.header .back-icon {
+    left: 15px;
+}
+.header .user-icon {
+    right: 15px;
+}
+.order-card {
+    background-color: #f5f5f5;
+    color: #000;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.order-card img {
+    border-radius: 8px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 15px;
+}
+.order-details {
+    flex: 1;
+}
+.order-title {
+    font-weight: bold;
+}
+.order-status {
+    font-size: 0.9em;
+    color: gray;
+}
+.order-price {
+    font-weight: bold;
+}
+.footer-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 15px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.btn-order-more {
+    background-color: #164705;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.btn-split, .btn-pay-all {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+.btn-split {
+    background-color: #164705;
+    color: white;
+    margin-right: 5px;
+    width: 100%;
+}
+.btn-pay-all {
+    background-color: black;
+    color: white;
+    margin-left: 5px;
+    width: 100%;
+}
+.order-addons {
+    display: none;
+    margin-top: 10px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.order-comment {
+    display: none;
+    margin-top: 10px;
+}
+.addons-label {
+    display: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.heading-tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.heading-tabs ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.heading-tabs a {
+    padding: 10px 15px;
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.heading-tabs a.active {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.order-card {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: #cc0000;
+    padding: 5px 10px;
+ 
+    display: flex;
+    align-items: center;
+}
+
+.payment-status i {
+    margin-right: 5px;
+}

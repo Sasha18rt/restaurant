@@ -6,14 +6,10 @@
   <title>@yield('title')</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<script src="https://kit.fontawesome.com/e3a49d370f.js" crossorigin="anonymous"></script>
-
+  <script src="https://kit.fontawesome.com/e3a49d370f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="{{url('CSS/app.css')}}">
-  
 </head>
 <body class="bg-white text-dark">
 <header class="header-area header-sticky">
@@ -47,6 +43,11 @@
                 </li>
                 @if (Route::has('login'))
                   @auth
+                    @if(Auth::user()->usertype == 2) 
+                    <li class="nav-item">
+                      <a class="nav-link btn btn-primary text-white" href="/select-table">Create Order</a>
+                    </li>
+                    @endif
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ Auth::user()->name }}
@@ -78,8 +79,6 @@
 
   @yield('main_content')
 
-
-  
   <footer class="bg-dark text-white">
   <div class="container">
     <div class="row">
@@ -103,7 +102,6 @@
     </div>
   </div>
 </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

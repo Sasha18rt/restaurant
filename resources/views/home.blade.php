@@ -327,11 +327,10 @@ function showTab(tabName, linkElement) {
     });
     linkElement.classList.add('active');
 }
-
 window.onload = function() {
-    var firstLink = document.querySelector('.heading-tabs a');
-    showTab('All', firstLink);
+    showTab('All', null);
 };
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.tab-item');

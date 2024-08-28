@@ -1,0 +1,89 @@
+body {
+    font-family: montserrat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    
+    flex: 1;
+}
+.header {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-plus {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.order-item {
+    margin-top: 10px;
+}
+.order-item .card-body {
+    padding: 10px;
+}
+.btn-success {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.content {
+    padding-bottom: 60px;
+}
+
+
+.btn-block {
+    margin-top: 15px;
+}
+.btn-group-toggle {
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-group-toggle .btn {
+    flex: 1 1 100%;
+    margin: 5px;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+.form-group {
+    margin-top: 20px;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.dish-type-btn {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}

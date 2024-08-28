@@ -112,7 +112,7 @@ class MainController extends Controller
             'number' => 'required|integer|min:1|max:20',
             'date' => 'required|date',
             'time' => 'required',
-            'message' => 'nullable|string|max:1000',
+      
         ]);
     
         
@@ -135,6 +135,7 @@ class MainController extends Controller
         $data->date = $request->date;
         $data->time = $request->time;
         $data->message = $request->message;
+        $data->user_id = Auth::id();
         $data->save();
     
         return redirect()->back()->with('success', 'Reservation submitted successfully!');

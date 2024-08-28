@@ -56,7 +56,19 @@
     transition: background-color 0.3s;
     text-decoration: none;
 }
-
+.btn-hire{
+    background-color: #00ad6b; 
+    color: #fff;
+    padding: 3px 6px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.btn-hire:hover{
+	background-color: #008c56; 
+}
 .btn-delete-user:hover {
     background-color: #b9352c;
 }
@@ -131,6 +143,7 @@
 
 .light {
 	--main-bg-color: var(--light-background);
+	--hover-bg-color: var(--second-bg-color);
 	--second-bg-color: var(--light-second-background);
 	--main-color: var(--light-color);
 	--second-color: var(--light-second-color);
@@ -138,6 +151,7 @@
 
 .dark {
 	--main-bg-color: var(--dark-background);
+	--hover-bg-color: #1a1a1a;
 	--second-bg-color: var(--dark-second-background);
 	--main-color: var(--dark-color);
 	--second-color: var(--dark-second-color);
@@ -746,6 +760,7 @@ body {
 	border-radius: 10px;
 	margin-bottom: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	overflow-x: auto; 
 }
 
 .card-header {
@@ -1018,4 +1033,78 @@ input {
 .addon-item button {
     margin-left: 10px;
 }
+
+.menu-card.new-table-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.new-table-button {
+	width: 180px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: var(--main-bg-color);
+	color: var(--main-color);
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.new-table-button:hover {
+	background-color: var(--hover-bg-color);
+}
+
+.new-table-button i {
+	font-size: 4rem;
+}
+
+.btn-outline-danger {
+	background-color: var(--main-bg-color);
+	color: var(--main-color);
+	transition: background-color 0.3s;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	display: block; 
+}
+
+.btn-outline-danger:hover {
+	background-color: var(--hover-bg-color);
+	
+}
+
+.menu-card .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+	
+}
+.card-title,
+.card-text {
+    margin: 3px 0;
+    padding-left: 10px;
+	font-size: 1.8rem;
+}
+
+.size {
+   
+	font-size: 1.8rem;
+}
+.btn-outline-danger{
+    padding-bottom: 20px;
+}
+
+
 

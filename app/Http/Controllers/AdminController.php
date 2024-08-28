@@ -105,6 +105,19 @@ class AdminController extends Controller
             return redirect()->back()->with('error', 'User not found.'); 
         }
     }
+    public function waiter($id)
+{
+    $user = User::find($id);
+
+    if ($user) {
+        $user->usertype = 2;
+        $user->save();
+        return redirect()->back()->with('success', 'User type updated successfully!'); 
+    } else {
+        return redirect()->back()->with('error', 'User not found.'); 
+    }
+}
+
 
     public function delete_reservation($id)
     {
