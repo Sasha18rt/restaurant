@@ -33,6 +33,7 @@ Route::post('/reservation', [MainController::class, 'reservation'])->name('reser
 
 
 Route::get('/api', [MainController::class, 'api'])->name('api');
+Route::delete('/delete-dish/{id}', [AdminController::class, 'deleteDish'])->name('delete_dish');
 
 
 Route::middleware(['auth'])->group(function () {
@@ -58,7 +59,6 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/areservation', [AdminController::class, 'areservation'])->name('admin_reservation');
         Route::delete('/delete_reservation/{id}',  [AdminController::class, 'delete_reservation'])->name('delete_reservation');
 
-        Route::get('/delete-dish/{id}', [AdminController::class, 'deleteDish'])->name('delete_dish');
 
         Route::get('/delete_menu_item/{id}', [AdminController::class, 'delete_menu_item'])->name('delete_menu_item');
 

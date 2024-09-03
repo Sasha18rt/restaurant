@@ -142,10 +142,12 @@
                                                                 <p>${{ $menuItem->price }}</p>
                                                             </div>
                                                             <div class="d-flex">
-                                                                <form action="{{ route('delete_dish', $menuItem->id) }}" method="post">
-                                                                    @csrf
-                                                                    <button type="submit" class=" btn-delete">Delete</button>
-                                                                </form>
+                                                            <form action="{{ route('delete_dish', $menuItem->id) }}" method="post" onsubmit="return confirm('Are you sure you want to delete this dish?');">
+    @csrf
+    @method('DELETE')
+    <button type="submit" class="btn-delete">Delete</button>
+</form>
+
                                                                 <a href="{{ route('edit_menu_item', $menuItem->id) }}" class=" btn-update">Update</a>
                                                                 <a href="{{ route('edit_addons', $menuItem->id) }}" class="btn-add">Add-ons</a>
 

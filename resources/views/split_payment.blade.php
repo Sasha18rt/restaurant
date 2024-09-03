@@ -55,7 +55,19 @@
 <div class="header">
     <div class="back-icon" onclick="window.history.back();">&#8592;</div>
     <h2>Split Payment for Table {{ $table->id }}</h2>
-    <div class="user-icon"><i class="fas fa-user"></i></div>
+    <div class="user-icon" >
+        @if (Route::has('login'))
+            @auth
+                <a href="{{ route('profile.show') }}">
+                    <i class="fas fa-user"style="color: white;"></i>
+                </a>
+            @else
+                <a href="{{ route('login') }}">
+                    <i class="fas fa-user"style="color: white;"></i>
+                </a>
+            @endauth
+        @endif
+    </div>
 </div>
 <div class="container">
     <h2>Select Items to Pay</h2>

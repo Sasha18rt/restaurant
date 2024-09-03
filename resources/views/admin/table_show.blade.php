@@ -10,10 +10,30 @@
 </head>
 <body>
 <div class="header">
-    <div class="back-icon"></div>
+<div class="back-icon">
+        <a href="/" style="color: white;">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    
     <h2>Table {{ $table->id }}</h2>
-    <div class="user-icon"><i class="fas fa-user"></i></div>
+    
+    <div class="user-icon">
+        @if (Route::has('login'))
+            @auth
+                <a href="{{ route('profile.show') }}">
+                    <i class="fas fa-user" style="color: white;"></i>
+                </a>
+            @else
+                <a href="{{ route('login') }}">
+                    <i class="fas fa-user" style="color: white;"></i>
+                </a>
+            @endauth
+        @endif
+    </div>
 </div>
+
 <div class="container">
     <h2>Current Orders</h2>
     @foreach($table->orders()

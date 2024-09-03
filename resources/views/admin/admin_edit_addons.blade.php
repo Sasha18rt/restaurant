@@ -20,7 +20,6 @@
             <button type="submit" class="btn btn-primary">Create Add-on</button>
         </form>
         
-        <!-- List of Existing Add-ons with Delete Option -->
         <div class="mb-3">
             <label class="form-label">Existing Add-ons:</label>
             <ul class="list-group">
