@@ -102,13 +102,13 @@ An overview of the admin's menu management interface, where administrators can e
 The landing page provides customers with a seamless way to explore the restaurant’s offerings.
 
 ### QR Code Scanning
-![QR Code Scanning](assets/qr_code_scanning.PNG)
+![QR Code Scanning](assets/qr_code_scanning.png)
 Each table has a unique QR code that customers can scan to access the menu, place orders, and pay directly.
 
 ### Table View
-![Table View](assets/table_view.PNG)
+<img src="assets/table_view.PNG" alt="Table View" width="300"/>
 A customer’s table view showing details of their order and payment options.
 
 ### Waiter View
-![Waiter View](assets/waiter_view.PNG)
+<img src="assets/waiter_view.PNG" alt="Waiter View" width="300"/>
 A dedicated interface for waitstaff to manage and fulfill customer orders efficiently.
