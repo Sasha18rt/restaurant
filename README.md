@@ -87,3 +87,28 @@ composer install
 npm install
 php artisan key:generate
 ```
+## Screenshots
+
+### Admin Panel
+![Admin Panel](assets/admin_panel.PNG)
+The admin panel allows restaurant staff to manage menu items, orders, and waitstaff, ensuring smooth operations.
+
+### Admin Menu View
+![Admin Menu View](assets/admin_menu_view.PNG)
+An overview of the admin's menu management interface, where administrators can edit and organize menu items.
+
+### Main Page
+![Main Page](assets/main_page.PNG)
+The landing page provides customers with a seamless way to explore the restaurant’s offerings.
+
+### QR Code Scanning
+![QR Code Scanning](assets/qr_code_scanning.PNG)
+Each table has a unique QR code that customers can scan to access the menu, place orders, and pay directly.
+
+### Table View
+![Table View](assets/table_view.PNG)
+A customer’s table view showing details of their order and payment options.
+
+### Waiter View
+![Waiter View](assets/waiter_view.PNG)
+A dedicated interface for waitstaff to manage and fulfill customer orders efficiently.
